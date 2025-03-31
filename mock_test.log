@@ -1,0 +1,100 @@
+2025-03-31 16:18:43,353 - __main__ - INFO - Initializing Mock Google Photos client...
+2025-03-31 16:18:43,353 - __main__ - INFO - Initializing Mock Amazon Photos client...
+2025-03-31 16:18:43,353 - __main__ - INFO - Starting mock photo transfer process...
+2025-03-31 16:18:43,353 - __main__ - INFO - Starting mock transfer process
+2025-03-31 16:18:43,353 - __main__ - INFO - Mock fetching media items (page_size=50, page_token=None)
+2025-03-31 16:18:43,353 - __main__ - INFO - Processing batch of 10 media items
+2025-03-31 16:18:43,375 - __main__ - INFO - Mock downloaded photo_0.jpg
+2025-03-31 16:18:43,375 - __main__ - INFO - Mock uploading photo_0.jpg to Amazon Photos...
+2025-03-31 16:18:43,576 - __main__ - INFO - Mock successfully uploaded photo_0.jpg to Amazon Photos
+2025-03-31 16:18:43,576 - __main__ - INFO - Successfully transferred photo_0.jpg
+2025-03-31 16:18:43,576 - __main__ - INFO - Mock downloaded photo_1.jpg
+2025-03-31 16:18:43,577 - __main__ - INFO - Mock uploading photo_1.jpg to Amazon Photos...
+2025-03-31 16:18:43,777 - __main__ - INFO - Mock successfully uploaded photo_1.jpg to Amazon Photos
+2025-03-31 16:18:43,777 - __main__ - INFO - Successfully transferred photo_1.jpg
+2025-03-31 16:18:43,778 - __main__ - INFO - Mock downloaded photo_2.jpg
+2025-03-31 16:18:43,778 - __main__ - INFO - Mock uploading photo_2.jpg to Amazon Photos...
+2025-03-31 16:18:43,978 - __main__ - INFO - Mock successfully uploaded photo_2.jpg to Amazon Photos
+2025-03-31 16:18:43,978 - __main__ - INFO - Successfully transferred photo_2.jpg
+2025-03-31 16:18:43,979 - __main__ - INFO - Mock downloaded photo_3.jpg
+2025-03-31 16:18:43,979 - __main__ - INFO - Mock uploading photo_3.jpg to Amazon Photos...
+2025-03-31 16:18:44,180 - __main__ - INFO - Mock successfully uploaded photo_3.jpg to Amazon Photos
+2025-03-31 16:18:44,180 - __main__ - INFO - Successfully transferred photo_3.jpg
+2025-03-31 16:18:44,180 - __main__ - INFO - Mock downloaded photo_4.jpg
+2025-03-31 16:18:44,180 - __main__ - INFO - Mock uploading photo_4.jpg to Amazon Photos...
+2025-03-31 16:18:44,381 - __main__ - INFO - Mock successfully uploaded photo_4.jpg to Amazon Photos
+2025-03-31 16:18:44,381 - __main__ - INFO - Successfully transferred photo_4.jpg
+2025-03-31 16:18:44,382 - __main__ - INFO - Mock downloaded photo_5.jpg
+2025-03-31 16:18:44,382 - __main__ - INFO - Mock uploading photo_5.jpg to Amazon Photos...
+2025-03-31 16:18:44,582 - __main__ - INFO - Mock successfully uploaded photo_5.jpg to Amazon Photos
+2025-03-31 16:18:44,582 - __main__ - INFO - Successfully transferred photo_5.jpg
+2025-03-31 16:18:44,583 - __main__ - INFO - Mock downloaded photo_6.jpg
+2025-03-31 16:18:44,583 - __main__ - INFO - Mock uploading photo_6.jpg to Amazon Photos...
+2025-03-31 16:18:44,783 - __main__ - INFO - Mock successfully uploaded photo_6.jpg to Amazon Photos
+2025-03-31 16:18:44,783 - __main__ - INFO - Successfully transferred photo_6.jpg
+2025-03-31 16:18:44,784 - __main__ - INFO - Mock downloaded photo_7.jpg
+2025-03-31 16:18:44,784 - __main__ - INFO - Mock uploading photo_7.jpg to Amazon Photos...
+2025-03-31 16:18:44,984 - __main__ - INFO - Mock successfully uploaded photo_7.jpg to Amazon Photos
+2025-03-31 16:18:44,985 - __main__ - INFO - Successfully transferred photo_7.jpg
+2025-03-31 16:18:44,985 - __main__ - INFO - Mock downloaded photo_8.jpg
+2025-03-31 16:18:44,985 - __main__ - INFO - Mock uploading photo_8.jpg to Amazon Photos...
+2025-03-31 16:18:45,186 - __main__ - INFO - Mock successfully uploaded photo_8.jpg to Amazon Photos
+2025-03-31 16:18:45,186 - __main__ - INFO - Successfully transferred photo_8.jpg
+2025-03-31 16:18:45,186 - __main__ - INFO - Mock downloaded photo_9.jpg
+2025-03-31 16:18:45,186 - __main__ - INFO - Mock uploading photo_9.jpg to Amazon Photos...
+2025-03-31 16:18:45,387 - __main__ - INFO - Mock successfully uploaded photo_9.jpg to Amazon Photos
+2025-03-31 16:18:45,387 - __main__ - INFO - Successfully transferred photo_9.jpg
+2025-03-31 16:18:45,388 - __main__ - INFO - Mock transfer completed. Stats: {'total': 10, 'success': 10, 'failed': 0, 'skipped': 0}
+2025-03-31 16:18:45,388 - __main__ - INFO - Transfer report generated at ./mock_transfer_report.json
+2025-03-31 16:18:45,388 - __main__ - INFO - Mock transfer completed. Transferred 10 photos successfully.
+2025-03-31 16:18:45,388 - __main__ - INFO - Transfer report saved to ./mock_transfer_report.json
+2025-03-31 16:22:10,031 - __main__ - INFO - Initializing Mock Google Photos client...
+2025-03-31 16:22:10,031 - __main__ - INFO - Initializing Mock Amazon Photos client...
+2025-03-31 16:22:10,031 - __main__ - INFO - Starting mock photo transfer process...
+2025-03-31 16:22:10,031 - __main__ - INFO - Starting mock transfer process
+2025-03-31 16:22:10,032 - __main__ - INFO - Mock fetching media items (page_size=50, page_token=None)
+2025-03-31 16:22:10,032 - __main__ - INFO - Processing batch of 10 media items
+2025-03-31 16:22:10,046 - __main__ - INFO - Mock downloaded photo_0.jpg
+2025-03-31 16:22:10,047 - __main__ - INFO - Mock uploading photo_0.jpg to Amazon Photos...
+2025-03-31 16:22:10,247 - __main__ - INFO - Mock successfully uploaded photo_0.jpg to Amazon Photos
+2025-03-31 16:22:10,247 - __main__ - INFO - Successfully transferred photo_0.jpg
+2025-03-31 16:22:10,248 - __main__ - INFO - Mock downloaded photo_1.jpg
+2025-03-31 16:22:10,248 - __main__ - INFO - Mock uploading photo_1.jpg to Amazon Photos...
+2025-03-31 16:22:10,448 - __main__ - INFO - Mock successfully uploaded photo_1.jpg to Amazon Photos
+2025-03-31 16:22:10,448 - __main__ - INFO - Successfully transferred photo_1.jpg
+2025-03-31 16:22:10,449 - __main__ - INFO - Mock downloaded photo_2.jpg
+2025-03-31 16:22:10,449 - __main__ - INFO - Mock uploading photo_2.jpg to Amazon Photos...
+2025-03-31 16:22:10,649 - __main__ - INFO - Mock successfully uploaded photo_2.jpg to Amazon Photos
+2025-03-31 16:22:10,650 - __main__ - INFO - Successfully transferred photo_2.jpg
+2025-03-31 16:22:10,650 - __main__ - INFO - Mock downloaded photo_3.jpg
+2025-03-31 16:22:10,650 - __main__ - INFO - Mock uploading photo_3.jpg to Amazon Photos...
+2025-03-31 16:22:10,851 - __main__ - INFO - Mock successfully uploaded photo_3.jpg to Amazon Photos
+2025-03-31 16:22:10,851 - __main__ - INFO - Successfully transferred photo_3.jpg
+2025-03-31 16:22:10,851 - __main__ - INFO - Mock downloaded photo_4.jpg
+2025-03-31 16:22:10,851 - __main__ - INFO - Mock uploading photo_4.jpg to Amazon Photos...
+2025-03-31 16:22:11,052 - __main__ - INFO - Mock successfully uploaded photo_4.jpg to Amazon Photos
+2025-03-31 16:22:11,052 - __main__ - INFO - Successfully transferred photo_4.jpg
+2025-03-31 16:22:11,052 - __main__ - INFO - Mock downloaded photo_5.jpg
+2025-03-31 16:22:11,053 - __main__ - INFO - Mock uploading photo_5.jpg to Amazon Photos...
+2025-03-31 16:22:11,253 - __main__ - INFO - Mock successfully uploaded photo_5.jpg to Amazon Photos
+2025-03-31 16:22:11,253 - __main__ - INFO - Successfully transferred photo_5.jpg
+2025-03-31 16:22:11,254 - __main__ - INFO - Mock downloaded photo_6.jpg
+2025-03-31 16:22:11,254 - __main__ - INFO - Mock uploading photo_6.jpg to Amazon Photos...
+2025-03-31 16:22:11,454 - __main__ - INFO - Mock successfully uploaded photo_6.jpg to Amazon Photos
+2025-03-31 16:22:11,454 - __main__ - INFO - Successfully transferred photo_6.jpg
+2025-03-31 16:22:11,455 - __main__ - INFO - Mock downloaded photo_7.jpg
+2025-03-31 16:22:11,455 - __main__ - INFO - Mock uploading photo_7.jpg to Amazon Photos...
+2025-03-31 16:22:11,655 - __main__ - INFO - Mock successfully uploaded photo_7.jpg to Amazon Photos
+2025-03-31 16:22:11,656 - __main__ - INFO - Successfully transferred photo_7.jpg
+2025-03-31 16:22:11,656 - __main__ - INFO - Mock downloaded photo_8.jpg
+2025-03-31 16:22:11,656 - __main__ - INFO - Mock uploading photo_8.jpg to Amazon Photos...
+2025-03-31 16:22:11,857 - __main__ - INFO - Mock successfully uploaded photo_8.jpg to Amazon Photos
+2025-03-31 16:22:11,857 - __main__ - INFO - Successfully transferred photo_8.jpg
+2025-03-31 16:22:11,857 - __main__ - INFO - Mock downloaded photo_9.jpg
+2025-03-31 16:22:11,858 - __main__ - INFO - Mock uploading photo_9.jpg to Amazon Photos...
+2025-03-31 16:22:12,058 - __main__ - INFO - Mock successfully uploaded photo_9.jpg to Amazon Photos
+2025-03-31 16:22:12,058 - __main__ - INFO - Successfully transferred photo_9.jpg
+2025-03-31 16:22:12,059 - __main__ - INFO - Mock transfer completed. Stats: {'total': 10, 'success': 10, 'failed': 0, 'skipped': 0}
+2025-03-31 16:22:12,059 - __main__ - INFO - Transfer report generated at ./mock_transfer_report.json
+2025-03-31 16:22:12,059 - __main__ - INFO - Mock transfer completed. Transferred 10 photos successfully.
+2025-03-31 16:22:12,059 - __main__ - INFO - Transfer report saved to ./mock_transfer_report.json
