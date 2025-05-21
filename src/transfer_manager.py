@@ -29,6 +29,10 @@ class TransferManager:
         }
         # Map to store Google album ID to Amazon album ID mapping
         self.album_mapping = {}
+
+    def _get_batch_size(self):
+        """Return the batch size for transfers."""
+        return int(os.getenv('MAX_PHOTOS_PER_BATCH', 50))
     
     def start_transfer(self, max_photos=None, dry_run=False, transfer_albums=True):
         """Start the transfer process
@@ -50,7 +54,7 @@ class TransferManager:
                 self._transfer_albums(dry_run=dry_run)
             
             # Get batch size from environment or use default
-            batch_size = int(os.getenv('MAX_PHOTOS_PER_BATCH', 50))
+            batch_size = self._get_batch_size()
             next_page_token = None
             
             # Track how many photos we've processed for max_photos limit
@@ -253,9 +257,15 @@ class TransferManager:
                 album_title = album_details['title']
                 
                 # Get batch size from environment or use default
-                batch_size = int(os.getenv('MAX_PHOTOS_PER_BATCH', 50))
+                batch_size = self._get_batch_size()
                 next_page_token = None
                 photos_processed = 0
+
+                # Cache existing photos in the target Amazon album once
+                existing_photos = {
+                    p['name']: p['id']
+                    for p in self.amazon_client.list_photos(album_id=amazon_album_id)
+                }
                 
                 # Process media items in the album in batches
                 while True:
@@ -293,14 +303,10 @@ class TransferManager:
                             logger.info(f"[DRY RUN] Would add photo {filename} to album '{album_title}' in Amazon Photos")
                             continue
                         
-                        # First check if this photo has already been transferred
-                        # We can search by filename in the Amazon Photos account
-                        amazon_photos = self.amazon_client.list_photos()
-                        matching_photos = [p for p in amazon_photos if p['name'] == filename]
-                        
-                        if matching_photos:
+                        # Check if this photo already exists in the target album
+                        if filename in existing_photos:
                             # Photo already exists, add it to the album
-                            photo_id = matching_photos[0]['id']
+                            photo_id = existing_photos[filename]
                             logger.info(f"Found existing photo {filename} with ID: {photo_id}")
                             
                             # Add the photo to the album
@@ -316,6 +322,8 @@ class TransferManager:
                             if upload_result and upload_result.get('success'):
                                 # Add the photo to the album
                                 photo_id = upload_result['id']
+                                # Remember the new photo so we don't upload it again
+                                existing_photos[filename] = photo_id
                                 if self.amazon_client.add_photo_to_album(photo_id, amazon_album_id):
                                     logger.info(f"Added photo {filename} to album '{album_title}' in Amazon Photos")
                                 else:
