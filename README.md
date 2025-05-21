@@ -2,6 +2,36 @@
 
 This application transfers photos and related files from Google Photos to Amazon Photos using their respective APIs.
 
+## Codebase Overview
+
+### General Structure
+
+- The project root contains this README with setup and usage instructions, a sample `.env` file, and helper scripts.
+- `requirements.txt` lists dependencies such as the Google API client, OAuth libraries, `tqdm`, and `python-dotenv`.
+- The `src/` directory holds the Python modules:
+  - `google_photos.py` – handles authentication and media retrieval from Google Photos.
+  - `amazon_photos.py` – handles authentication and uploads to Amazon Photos, including creating albums and adding photos.
+  - `transfer_manager.py` – orchestrates downloading items from Google and uploading to Amazon, with optional album handling and dry‑run mode.
+  - `main.py` – the CLI entry point that loads environment variables, parses arguments, and kicks off the transfer process.
+  - `setup_amazon_auth.py` – obtains an Amazon Photos refresh token via OAuth and writes it to `.env`.
+  - `mock_test.py` and `test_album_transfer.py` – standalone scripts that simulate transfers without real API calls for testing purposes.
+- Additional utilities include `generate_certificates.py` to create self-signed certificates for local OAuth redirects.
+
+### Important Things to Know
+
+1. **Environment Configuration** – Copy `.env.example` and fill in your Google and Amazon API credentials. Run `src/setup_amazon_auth.py` to generate the Amazon refresh token.
+2. **Running the Transfer** – Execute `python src/main.py` after installing requirements and providing credentials. The script authenticates, downloads from Google, uploads to Amazon, and writes a JSON report with statistics.
+3. **Command-line Options** – `main.py` supports flags such as `--max-photos`, `--download-dir`, `--report-path`, `--dry-run`, and `--skip-albums` to customize behavior.
+4. **Album Handling** – The transfer manager can mirror album structure on Amazon Photos. Album creation and photo placement occur in `_transfer_albums` and `_process_album_photos` methods.
+5. **Testing without APIs** – `mock_test.py` and `test_album_transfer.py` create mock clients to simulate transfers, useful for understanding the flow without real credentials.
+
+### Pointers for Learning Next
+
+- Review the Google Photos and Amazon Drive API documentation to understand quotas and limitations.
+- Explore how OAuth tokens are stored and refreshed in `google_photos.py` and `amazon_photos.py`.
+- Examine the logic in `TransferManager` for rate limiting and retries.
+- Look at the JSON reports (for example, `mock_transfer_report.json`) to see how transfer statistics are logged and consider extending the reporting functionality.
+
 ## Setup
 
 ### Prerequisites
